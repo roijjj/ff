@@ -2,7 +2,7 @@
 #include <map>
 #include<vector>
 #include <fstream>
-#include<string>
+#include <string>
 #include <iostream>
 
 using namespace std;
@@ -13,17 +13,23 @@ public:
 	level();
 	~level();
 	
-	void load(string);
+	void load(int);
 	void print();
-	void move(int );
+	void move(int, int );
 	char gett(int, int);
 	void sett(int, int, char);
 	void setposition(int x, int y);
 	void getposition(int& x, int& y);
+	void next();
+	//void relMove(int dx, int dy);
+
+
 private:
 	vector <string> lvl;
 	int _x;
 	int _y;
 	char mt;
+	int l;
 };
+
 
