@@ -1,4 +1,3 @@
-#include <map>
 #include <fstream>
 #include <iostream>
 #include <conio.h>
@@ -7,11 +6,17 @@
 #include "level.h"
 level Level;
 
-void game (string lvl) {
+void game (int lvl) {
 
 	//plaer.init()
+	//l=lvl;
+
+	
+		//Level.move(0, -1);
+
 	Level.load(lvl);
 	Level.print();
+
 	system("pause");
 }
 void move () {
@@ -22,27 +27,27 @@ void move () {
 	char input;
 	input = _getch();
 	//cout << input << endl;
-	Level.move(input);
+	//Level.move(input);
 	switch (input) {
 
 	case 'w':
 	case 'W':
-		Level.move(-1);
+		Level.move(0,-1);
 
 		break;
 	case 's':
 	case 'S':
-		Level.move(1);
+		Level.move(0,1);
 
 		break;
 	case 'a':
 	case 'A':
-		Level.move(-1);
+		Level.move(-1,0);
 
 		break;
 	case 'd':
 	case 'D':
-		Level.move(1);
+		Level.move(1,0);
 
 		break;
 	}
@@ -60,7 +65,27 @@ void play() {
 }
 int main() {
 
-	game ("maze1.txt");
+	
+	cout << "1. new game \n" << "2. select a level\n" << "3. exit" << endl;
+	int im;
+		 cin>>im;
 
+	switch (im) {
+	case 1:
+		game (1);
+	play();
+		break;
+	case 2:
+		int ll;
+		cout << "select a level 1-10";
+		cin >> ll;
+		cout << ll << endl;
+		system("pause");
+		game(ll);
 		play();
+		break;
+	case 3:
+		break;
+	}
+		
 }
