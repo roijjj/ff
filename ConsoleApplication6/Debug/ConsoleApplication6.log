@@ -1,0 +1,6 @@
+﻿  level.cpp
+e:\c++\consoleapplication6\consoleapplication6\level.cpp(37): warning C4018: '<': signed/unsigned mismatch
+e:\c++\consoleapplication6\consoleapplication6\level.cpp(38): warning C4018: '<': signed/unsigned mismatch
+e:\c++\consoleapplication6\consoleapplication6\level.cpp(56): warning C4018: '<': signed/unsigned mismatch
+  ConsoleApplication6.vcxproj -> E:\c++\ConsoleApplication6\Debug\ConsoleApplication6.exe
+  ConsoleApplication6.vcxproj -> E:\c++\ConsoleApplication6\Debug\ConsoleApplication6.pdb (Full PDB)
