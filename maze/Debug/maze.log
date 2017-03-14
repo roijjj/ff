@@ -1,0 +1,6 @@
+﻿  level.cpp
+e:\usb\c++\fin2\maze\maze\level.cpp(37): warning C4018: '<': signed/unsigned mismatch
+e:\usb\c++\fin2\maze\maze\level.cpp(38): warning C4018: '<': signed/unsigned mismatch
+e:\usb\c++\fin2\maze\maze\level.cpp(56): warning C4018: '<': signed/unsigned mismatch
+  maze.vcxproj -> E:\usb\c++\fin2\maze\Debug\maze.exe
+  maze.vcxproj -> E:\usb\c++\fin2\maze\Debug\maze.pdb (Full PDB)
