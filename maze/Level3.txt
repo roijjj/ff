@@ -1,5 +1,8 @@
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-A.A.......A.......A.........A...........A.....A.................A.....A.......A
-A.AAA.AAA.AAAAA.A.AAA.AAAAA.AAA.AAAAA.AAA.AAA.A.A.AAAAAAAAAAAAA.AAA.A.AAAAA.A.A
-A.....A.A.....A.A.....A...A...A.A...A.....A.A...A.A...........A...A.A.......A.A
-AAAAAAA.AAAAA.A.AAAAA.A.AAA.A.A.AAAA.AAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+A.......a...a.......a.....a.......A
+A.AAAAA.a.a.aaa.aaa.a.aaa.aaaaaaa.a
+a.....a...a.....a...a.a.a.......a.a
+aaaaa.aaaaaaaaaaa.aaa.a.aaaaaaa.a.a
+a.....a...a.....a.....a.......a...a
+A.aaaaaaa.A.AAA.aaaaaaa.aaaaaaaaa.a
+a.a.......a....a
