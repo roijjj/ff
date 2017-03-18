@@ -1,7 +1,5 @@
 #include "level.h"
 
-
-
 #include<iostream>
 #include<fstream>
 using namespace std;
@@ -9,10 +7,10 @@ using namespace std;
 
 level::level()
 {
+	
 	_x = 0;
 	_y = 0;
-	//l = 0;
-	//l = fn;
+	
 }
 
 void level::load(int fn) {
@@ -20,15 +18,15 @@ void level::load(int fn) {
 	//load the lvl
 	ifstream fi;
 	 
-cout << "level  " << fn << endl;
-	string levelString = to_string(fn);
-	string filelevel = "level" + levelString + ".txt";
+	string levelString = to_string(fn);//change a int to a string 
+	string filelevel = "levels\\level" + levelString + ".txt";
 	
 
 	l = fn;
 	cout << "level    "<<l<<endl;
-	fi.open(filelevel);
-
+	fi.open(filelevel);//opens the file
+	
+	//checks of the file is there
 	if (fi.fail()) {
 		cout << "did not open";
 		system("pause");
@@ -36,113 +34,101 @@ cout << "level  " << fn << endl;
 	}
 	string line;
 
+	//reads the file into an vector
 	while (getline(fi, line)) {
 		lvl.push_back(line);
 
 	}
-	fi.close();
+	fi.close();//closes the file
 
 	char t;
+	//searchs the vector for the @ symbol 
 	for (int i = 0; i < lvl.size(); i++)
 	{
-		//cout << i << endl;
-
 		for (int j = 0; j < lvl[i].size(); j++) {
 			t = lvl[i][j];
-			//cout << j << endl;
 
 			switch (t)
 			{
 			case'@':
-			//	cout << j  << endl;
-				setposition(j, i );
-
-
-
+				setposition(j, i );//sets the position of the player
 				break;
 
 			}
 		}
 	}
 }
+
+//prints the vector
 void level::print() {
+
+	//cout << string(100, '\n');
+cout << "to move it is w, s, a, d" << endl;
 	for (int i = 0; i < lvl.size(); i++) {
+		
+
 		cout << lvl[i] << endl;
 
 	}
-	cout << endl;
+	
 }
+//moves the player
 void level::move(int x, int y) {
 
 	int px, py;
 
+	//gets the posiont of the player
 	getposition(px, py);
-	//cout << "mm" << px << py << endl;
-		mt = gett(px+ x, py + y);
+	
+	//gets the postion of where the player want to move
+	mt = gett(px+ x, py + y);
 
+		//checks if the player can move to the position 
 		switch (mt) {
 		case '#':
 			cout << "you ran into a wall" << endl;
 			break;
 		case'.':
+
+			//sets the new postion of the character
 			setposition(px+ x, py + y);
 
-
+			
 			sett(px, py, '.');
 			sett(px+ x, py + y, '@');
 			break;
 		case'H':
+			
+			//calls the next level
 			next();
-			cout << l;
-
-			cout << "next";
-			system("pause");
+	
+		
 			break;
-
+			
 		}
 		
 }
-/*void level::relMove(int dx, int dy)
-{
-	getposition(x, y);
 
-	int x, y;
-	x = _x + dx;
-	y = _y + dy;
-	move(x, y);
-}*/
-char level::gett(int x, int y)
-{
-	return lvl[y][x];
-
-}
-void level::sett(int x, int y, char tile)
-{
-	lvl[y][x] = tile;
-
-
-}
-void level::setposition(int x, int y) {
-	_x = x;
-	_y = y;
-	//cout << "kk" << y;
-}
-void level::getposition(int& x, int& y) {
-	x = _x;
-	y = _y;
-}
+//moves onto the next level
 void level::next() {
+	//clears the vector
 	lvl.clear();
-	
-	//if (10>=l) {
-		cout<< l <<endl;
-		int nxx = l;
-		cout << "bhk"<<nxx++<<endl;
+	//checks to see if you beat the game
+	if (4>=l) {
+
+		
+		int nxx ;
+		//loads the next level
+		nxx =l+1;
+		cout << nxx << endl;
+
 		load(nxx);
-	//}
+	}
+	else
+	{
+		cout << "congrats you beat the game" << endl;
+		
+	}
 	
 
-}
-level::~level()
-{
 }
